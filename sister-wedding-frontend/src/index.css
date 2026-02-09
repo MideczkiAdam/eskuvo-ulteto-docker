@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
+
+:root{
+  --cube-font: 'Style Script', cursive;
+}
+
+#root, main{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  background: url("./assets/background.jpg");
+  background-size: fill;
+  background-position: fixed;
+}
+
+.homePage{
+  display: flex;
+  justify-content: center;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.guestCardsWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.guestsPage{
+  min-height: 100vh;
+  padding-top: 20px;
+  padding-bottom: 150px;
+}
+
+.animateSpinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
