@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./sister-wedding-backend
+    container_name: wedding_backend
+    env_file:
+     - ./sister-wedding-backend/.env
+    expose:
+     - "8000"
+
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    container_name: wedding_nginx
+    ports:
+     - "80:80"
